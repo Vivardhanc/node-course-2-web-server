@@ -57,12 +57,21 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+      pageTitle: 'Projects List',
+      kickStartProjectsMessage: `Welcome to the projects list page`
+  });
+});
+
+
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page',
     loggedInUser: 'Viv Coorapati'
   });
 });
+
 
 // /bad - send back json with errorMessage
 app.get('/bad', (req, res) => {
